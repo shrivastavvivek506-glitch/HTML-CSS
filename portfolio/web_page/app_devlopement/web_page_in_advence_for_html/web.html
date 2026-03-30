@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Level Web Page</title>
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f2027;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav h2 {
+    color: #00d4ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav ul li:hover {
+    color: #00d4ff;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.typing {
+    color: #00d4ff;
+    border-right: 3px solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Button */
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #00d4ff;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Floating circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0,212,255,0.2);
+    animation: float 10s infinite ease-in-out;
+}
+
+.circle:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+}
+
+.circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 70%;
+    animation-duration: 15s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+/* Section */
+.section {
+    padding: 100px 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating shapes -->
+<div class="circle"></div>
+<div class="circle"></div>
+
+<!-- Navbar -->
+<nav>
+    <h2>MySite</h2>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+    <h1>I am a <span class="typing"></span></h1>
+    <button class="btn">Explore</button>
+</div>
+
+<!-- Sections -->
+<div class="section">🔥 Amazing animations on scroll</div>
+<div class="section">💡 Clean modern UI design</div>
+<div class="section">🚀 Fully responsive layout</div>
+
+<script>
+
+/* Typing effect */
+const text = ["Developer", "Designer", "Creator"];
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+    current = text[i];
+    
+    if (!isDeleting) {
+        document.querySelector(".typing").textContent = current.substring(0, j++);
+        if (j > current.length) {
+            isDeleting = true;
+            setTimeout(type, 1000);
+            return;
+        }
+    } else {
+        document.querySelector(".typing").textContent = current.substring(0, j--);
+        if (j === 0) {
+            isDeleting = false;
+            i = (i + 1) % text.length;
+        }
+    }
+    setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
+
+/* Scroll animation */
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
