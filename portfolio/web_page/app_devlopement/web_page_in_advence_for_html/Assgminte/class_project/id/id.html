@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    input {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 8px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+    }
+</style>
+</head>
+    <body>
+        Enter Name: <input type="text" id="name">
+        <button onclick="showName()">don't stop</button>
+
+        <p id="reuslt"></p>
+        <script>
+            function showName(){
+                let userName =
+                document.getElementById("name").value;
+                document.getElementById("reuslt").innerHTML = "hello" + userName; 
+            }
+        </script>
+        
+    </body>
+</html>
