@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Formatting Example</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+        }
+
+        h1 {
+            color: darkblue;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 10px;
+            width: 70%;
+        }
+
+        .highlight {
+            color: red;
+        }
+
+        /* 📱 Mobile Responsive */
+        @media (max-width: 600px) {
+            .box {
+                width: 90%;
+                margin: 10px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Welcome to My Website</h1>
+
+        <p>This webpage demonstrates <strong>HTML formatting tags</strong> with styling.</p>
+
+        <p>
+            This is first line <br>
+            This is second line <br>
+            This is third line
+        </p>
+
+        <p>
+            <b>This is bold text</b> and 
+            <strong class="highlight">this is strong important text</strong>.
+        </p>
+
+        <p><i>This text is italic style.</i></p>
+
+        <p><u>This text is underlined.</u></p>
+
+        <p><b><i><u>All formatting tags combined together!</u></i></b></p>
+
+    </div>
+
+</body>
+</html>
