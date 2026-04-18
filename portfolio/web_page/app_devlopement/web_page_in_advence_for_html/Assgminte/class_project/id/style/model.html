@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>sum of two numbers</title>
+    </head>
+    <body>
+        <h1>sum of two numbers</h1>
+        <p>enter the first number</p>
+        <input type="text" id="num1">
+        <p>enter the second number</p>
+        <input type="text" id="num2">
+        <button onclick="calculate()">calculate</button>
+        <p id="result"></p>
+
+        <script>
+            function calculate() {
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+                var sum = num1 + num2;
+                document.getElementById('result').innerText = 'The sum is: ' + sum;
+            }
+        </script>
+    </body>
+</html>
