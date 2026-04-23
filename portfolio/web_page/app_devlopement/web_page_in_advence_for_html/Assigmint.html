@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+       body{
+    text-align: center;
+    background: linear-gradient(to right, #79aba2, #7f89b9);
+    font-family: Arial, sans-serif;
+}
+
+/* Form container (center box effect) */
+body > * {
+    
+    background-color: rgba(188, 101, 101, 0.632);
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(198, 115, 115, 0.6);
+}
+
+/* Heading */
+h2{
+    font-size: 24px;
+    background-color: blanchedalmond;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Labels */
+label{
+    font-size: 16px;
+    color: #555;
+}
+
+/* Input fields */
+input{
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover{
+    background-color: green;
+}
+        
+    </style>
+</head>
+<body>
+    <h2>FORM</h2>
+    <label for="textbox"> Name:</label>
+    <input type="text" placeholder="Name" id="textbox">
+    <br>
+    <label for="password">password</label>
+    <input type="password" placeholder="password" id="password">
+    <br>
+    <input type="radio" name="gender">
+    male:
+    <input type="radio" name="gender">
+    female:
+    <br>
+    <button onclick="submitForm()">Submit</button>
+
+</body>
+</html>
