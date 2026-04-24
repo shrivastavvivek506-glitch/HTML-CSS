@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Form</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: #333;
+    }
+
+    .container {
+      width: 400px;
+      margin: 50px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #5a67d8;
+    }
+
+    .result {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f1f1f1;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Survey Form</h2>
+
+  <form id="myForm">
+    <p><b>Select Your Skills:</b></p>
+
+    <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+    <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+    <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+    <label><input type="checkbox" name="skills" value="Python"> Python</label>
+
+    <br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  document.getElementById("myForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let selected = [];
+    let checkboxes = document.querySelectorAll('input[name="skills"]:checked');
+
+    checkboxes.forEach((cb) => {
+      selected.push(cb.value);
+    });
+
+    if (selected.length === 0) {
+      document.getElementById("result").innerHTML = "⚠ Please select at least one option!";
+    } else {
+      document.getElementById("result").innerHTML =
+        "✅ You selected: " + selected.join(", ");
+    }
+  });
+</script>
+
+</body>
+</html>
