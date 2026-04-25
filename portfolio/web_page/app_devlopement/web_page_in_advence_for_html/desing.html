@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>My Styled Page</title>
+        <style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+
+.box {
+    background: #e7d5d5;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+
+.box:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Heading style */
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+/* paragraph style */
+p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* button style */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* button hover */
+button:hover {
+    background: linear-gradient(45deg, #ee0979, #ff6a00);
+    transform: scale(1.1);
+}
+
+/* button click effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* responsive design */
+@media (max-width: 400px) {
+    .box {
+        width: 90%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1>Welcome Students</h1>
+            <p>This is a simple web page designed using HTML and CSS.</p>
+            <button>Click Me</button>
+
+        </div>
+    </body>
+</html>
