@@ -48,6 +48,10 @@
                 if (num3 > largest) {
                     largest = num3;
                 }
+                else if (num1 === num2 && num2 === num3) {
+                    document.getElementById('result').textContent = 'All numbers are equal.';
+                    return;
+                }
 
                 document.getElementById('result').textContent = 'The largest number is: ' + largest;
             }
