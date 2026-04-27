@@ -4,21 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h2{
+            font-style: align-items: center;
+        }
+  body{
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+  }
+
+  .calc{
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    width:260px;
+  }
+
+  #display{
+    width:100%;
+    height:50px;
+    font-size:20px;
+    margin-bottom:15px;
+    text-align:right;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+  }
+
+  .btns{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+  }
+
+  button{
+    padding:15px;
+    font-size:16px;
+    border:none;
+    border-radius:10px;
+    background:#667eea;
+    color:white;
+    cursor:pointer;
+    transition:0.2s;
+  }
+
+  button:hover{
+    background:#5a67d8;
+    transform:scale(1.05);
+  }
+
+  .equal{
+    grid-column:span 2;
+    background:#48bb78;
+  }
+
+  .clear{
+    background:#e53e3e;
+  }
+</style>
+    
 </head>
 <body>
     <h2>Sum of two numbers</h2>
     <input type="number" id="num1" placeholder="Enter The Number">
     <br><br>
     <input type="number" id="num2" placeholder="Enter The Number">
-    <button onclick="SUM()">Calculate Sum</button>
+    <br><br>
+    <button onclick="add()">Add</button>
+    <br><br>
+    <button onclick="sub()">Subtract</button>
+    <br><br>
+    <button onclick="mul()">Multiply</button>
+    <br><br>
+    <button onclick="div()">Divide</button>
+
     <p id="dome"></p>
     <script>
-        function SUM(){
+        function add(){
             let num1 = Number(document.getElementById("num1").value);
             let num2 = Number(document.getElementById("num2").value);
             let  sum = num1+num2;
             document.getElementById("dome").innerHTML = " Sum = "+sum;
         }
+        function sub(){
+            let num1 = Number (document.getElementById("num1").value);
+            let num2 = Number (document.getElementById("num2").value);
+            let sub = num1-num2;
+            document.getElementById("dome").innerHTML = "SUB = " + sub;
+        }
+        function mul(){
+            let num1 = Number (document.getElementById("num1").value);
+            let num2 = Number (document.getElementById("num2").value);
+            let mul = num1*num2;
+            document.getElementById("dome").innerHTML = "MUL = " + mul;
+        }
+        function div(){
+            let num1 = Number (document.getElementById("num1").value);
+            let num2 = Number (document.getElementById("num2").value);
+            let div = num1/num2;
+            document.getElementById("dome").innerHTML = "DIV = " + div;
+        }
+        
     </script>
 </body>
 </html>
