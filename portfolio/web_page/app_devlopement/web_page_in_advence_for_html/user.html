@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS JavaScript Project</title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            text-align:center;
+            width:300px;
+            box-shadow:0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:#333;
+        }
+
+        input{
+            width:90%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            padding:10px 20px;
+            border:none;
+            background:#4facfe;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#008cdd;
+        }
+
+        #result{
+            margin-top:15px;
+            font-size:18px;
+            color:#222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome</h1>
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <button onclick="showMessage()">Submit</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function showMessage(){
+            let name = document.getElementById("name").value;
+
+            if(name === ""){
+                document.getElementById("result").innerHTML = "Please enter your name!";
+            } else {
+                document.getElementById("result").innerHTML = "Hello, " + name + " 👋";
+            }
+        }
+    </script>
+
+</body>
+</html>
