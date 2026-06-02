@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paytm Login</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#eef8ff;
+}
+
+.login-box{
+  width:360px;
+  background:white;
+  padding:35px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.logo{
+  font-size:42px;
+  font-weight:bold;
+  color:#00baf2;
+  margin-bottom:10px;
+}
+
+.logo span{
+  color:#002970;
+}
+
+h2{
+  margin-bottom:25px;
+  color:#333;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:15px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  border:none;
+  border-radius:8px;
+  background:#00baf2;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#009fd1;
+}
+
+.links{
+  margin-top:20px;
+  font-size:14px;
+}
+
+.links a{
+  text-decoration:none;
+  color:#002970;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+  <div class="logo">
+    Pay<span>tm</span>
+  </div>
+
+  <h2>Login to Paytm 💰</h2>
+
+  <input type="text" id="mobile" placeholder="Mobile Number">
+
+  <input type="password" id="password" placeholder="Password">
+
+  <button onclick="login()">LOGIN</button>
+
+  <div class="links">
+    <a href="#">Forgot Password?</a>
+  </div>
+
+</div>
+
+<script>
+function login(){
+
+  let mobile = document.getElementById("mobile").value;
+  let pass = document.getElementById("password").value;
+
+  if(mobile === "" || pass === ""){
+    alert("Please fill all fields");
+  }
+  else{
+    alert("Paytm Login Successful 💰");
+  }
+}
+</script>
+
+</body>
+</html>
