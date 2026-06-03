@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+
+    <style>
+        body{
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: Arial;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            margin-top: 100px;
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 15px black;
+        }
+
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Welcome</h1>
+        <p>This is my HTML webpage.</p>
+
+        <button onclick="showMessage()">
+            Click Me
+        </button>
+    </div>
+
+    <script>
+        function showMessage(){
+            alert("Hello Vivek! Welcome to Coding.");
+        }
+    </script>
+
+</body>
+</html>
