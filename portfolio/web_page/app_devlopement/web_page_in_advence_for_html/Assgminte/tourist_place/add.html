@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gaming Website</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#111;
+            color:white;
+        }
+
+        header{
+            background:black;
+            padding:20px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        header h1{
+            color:cyan;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:cyan;
+        }
+
+        .hero{
+            height:90vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+            url('https://images.unsplash.com/photo-1542751371-adc38448a05e');
+            background-size:cover;
+            background-position:center;
+            text-align:center;
+        }
+
+        .hero h2{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:20px;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            padding:15px 30px;
+            background:cyan;
+            color:black;
+            text-decoration:none;
+            border-radius:10px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+        }
+
+        .games{
+            padding:50px;
+            text-align:center;
+        }
+
+        .game-box{
+            display:inline-block;
+            background:#222;
+            width:250px;
+            margin:20px;
+            padding:20px;
+            border-radius:15px;
+            transition:0.3s;
+        }
+
+        .game-box:hover{
+            transform:scale(1.05);
+            box-shadow:0 0 15px cyan;
+        }
+
+        footer{
+            background:black;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>GameZone</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome Gamers</h2>
+    <p>Play the best online games here</p>
+
+    <a href="#" class="btn">Start Playing</a>
+</section>
+
+<section class="games">
+
+    <h2>Popular Games</h2>
+
+    <div class="game-box">
+        <h3>Free Fire</h3>
+        <p>Battle Royale Action Game</p>
+    </div>
+
+    <div class="game-box">
+        <h3>BGMI</h3>
+        <p>Survival Multiplayer Game</p>
+    </div>
+
+    <div class="game-box">
+        <h3>Minecraft</h3>
+        <p>Creative Adventure World</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 GameZone | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
