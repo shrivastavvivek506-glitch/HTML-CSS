@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:#f4f4f4;
+        }
+
+        header{
+            background:#333;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#444;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-size:18px;
+        }
+
+        section{
+            padding:40px;
+            text-align:center;
+        }
+
+        button{
+            padding:10px 20px;
+            font-size:18px;
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome To My Website</h1>
+        <p>Simple HTML Website</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Hello User</h2>
+        <p>This is a simple responsive website using HTML CSS and JavaScript.</p>
+
+        <button onclick="showMessage()">Click Me</button>
+    </section>
+
+    <footer>
+        © 2026 My Website
+    </footer>
+
+    <script>
+        function showMessage(){
+            alert("Welcome to my website!");
+        }
+    </script>
+
+</body>
+</html>
