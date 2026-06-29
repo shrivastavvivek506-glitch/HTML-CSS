@@ -1,207 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Next Level Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Formatting Example</title>
 
-<style>
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+        }
 
-body {
-    background: #0f2027;
-    color: white;
-    overflow-x: hidden;
-}
+        h1 {
+            color: darkblue;
+            text-transform: uppercase;
+        }
 
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: rgba(0,0,0,0.5);
-    position: fixed;
-    width: 100%;
-    top: 0;
-}
+        p {
+            font-size: 18px;
+        }
 
-nav h2 {
-    color: #00d4ff;
-}
+        .box {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 10px;
+            width: 70%;
+        }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
+        .highlight {
+            color: red;
+        }
 
-nav ul li {
-    margin-left: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        /* 📱 Mobile Responsive */
+        @media (max-width: 600px) {
+            .box {
+                width: 90%;
+                margin: 10px;
+                padding: 15px;
+            }
 
-nav ul li:hover {
-    color: #00d4ff;
-}
+            h1 {
+                font-size: 22px;
+            }
 
-/* Hero */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-}
-
-.hero h1 {
-    font-size: 3rem;
-}
-
-.typing {
-    color: #00d4ff;
-    border-right: 3px solid;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-/* Button */
-.btn {
-    margin-top: 20px;
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    background: #00d4ff;
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-}
-
-/* Floating circles */
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(0,212,255,0.2);
-    animation: float 10s infinite ease-in-out;
-}
-
-.circle:nth-child(1) {
-    width: 100px;
-    height: 100px;
-    top: 20%;
-    left: 10%;
-}
-
-.circle:nth-child(2) {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    left: 70%;
-    animation-duration: 15s;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-50px); }
-    100% { transform: translateY(0); }
-}
-
-/* Section */
-.section {
-    padding: 100px 50px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 1s;
-}
-
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-</style>
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- Floating shapes -->
-<div class="circle"></div>
-<div class="circle"></div>
+    <div class="box">
 
-<!-- Navbar -->
-<nav>
-    <h2>MySite</h2>
-    <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-    </ul>
-</nav>
+        <h1>Welcome to My Website</h1>
 
-<!-- Hero -->
-<div class="hero">
-    <h1>I am a <span class="typing"></span></h1>
-    <button class="btn">Explore</button>
-</div>
+        <p>This webpage demonstrates <strong>HTML formatting tags</strong> with styling.</p>
 
-<!-- Sections -->
-<div class="section">🔥 Amazing animations on scroll</div>
-<div class="section">💡 Clean modern UI design</div>
-<div class="section">🚀 Fully responsive layout</div>
+        <p>
+            This is first line <br>
+            This is second line <br>
+            This is third line
+        </p>
 
-<script>
+        <p>
+            <b>This is bold text</b> and 
+            <strong class="highlight">this is strong important text</strong>.
+        </p>
 
-/* Typing effect */
-const text = ["Developer", "Designer", "Creator"];
-let i = 0;
-let j = 0;
-let current = "";
-let isDeleting = false;
+        <p><i>This text is italic style.</i></p>
 
-function type() {
-    current = text[i];
-    
-    if (!isDeleting) {
-        document.querySelector(".typing").textContent = current.substring(0, j++);
-        if (j > current.length) {
-            isDeleting = true;
-            setTimeout(type, 1000);
-            return;
-        }
-    } else {
-        document.querySelector(".typing").textContent = current.substring(0, j--);
-        if (j === 0) {
-            isDeleting = false;
-            i = (i + 1) % text.length;
-        }
-    }
-    setTimeout(type, isDeleting ? 50 : 100);
-}
-type();
+        <p><u>This text is underlined.</u></p>
 
-/* Scroll animation */
-const sections = document.querySelectorAll(".section");
+        <p><b><i><u>All formatting tags combined together!</u></i></b></p>
 
-window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            sec.classList.add("show");
-        }
-    });
-});
-
-</script>
+    </div>
 
 </body>
 </html>
