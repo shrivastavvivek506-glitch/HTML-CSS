@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 1</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 id="text">Welcome to My Website</h2>
+
+<button onclick="changeText()">Click Here</button>
+
+<script>
+function changeText(){
+    document.getElementById("text").innerHTML = "Hello! You clicked the button.";
+}
+</script>
+
+</body>
+</html>
