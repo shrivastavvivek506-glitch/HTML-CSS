@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Example 2</title>
+
+<style>
+body{
+    text-align:center;
+    margin-top:100px;
+    font-family:Arial;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Background Color Changer</h2>
+
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+function changeColor(){
+
+var colors=["red","green","blue","yellow","pink","orange","purple"];
+
+var random=Math.floor(Math.random()*colors.length);
+
+document.body.style.backgroundColor=colors[random];
+
+}
+</script>
+
+</body>
+</html>
