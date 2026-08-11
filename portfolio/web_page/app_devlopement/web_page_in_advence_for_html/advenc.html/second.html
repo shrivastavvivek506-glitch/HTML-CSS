@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Advanced Student Dashboard using HTML5">
+
+    <title>Student Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🎓 Student Dashboard</h1>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a> |
+            <a href="#students">Students</a> |
+            <a href="#courses">Courses</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Dashboard -->
+    <main>
+
+        <section id="dashboard">
+
+            <h2>Welcome, Vivek 👋</h2>
+
+            <p>
+                Welcome to your student management dashboard.
+            </p>
+
+            <figure>
+                <img src="https://via.placeholder.com/300"
+                     alt="Student Profile"
+                     width="300">
+
+                <figcaption>
+                    Student Profile
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <hr>
+
+        <!-- Student Information -->
+        <section id="students">
+
+            <h2>Student Information</h2>
+
+            <table border="1" cellpadding="10">
+
+                <caption>
+                    BCA Student Records
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Semester</th>
+                        <th>Marks</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>101</td>
+                        <td>Rahul Kumar</td>
+                        <td>BCA</td>
+                        <td>2nd</td>
+                        <td>85%</td>
+                        <td>Pass</td>
+                    </tr>
+
+                    <tr>
+                        <td>102</td>
+                        <td>Aman Sharma</td>
+                        <td>BCA</td>
+                        <td>2nd</td>
+                        <td>78%</td>
+                        <td>Pass</td>
+                    </tr>
+
+                    <tr>
+                        <td>103</td>
+                        <td>Vivek Shrivastav</td>
+                        <td>BCA</td>
+                        <td>2nd</td>
+                        <td>82%</td>
+                        <td>Pass</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <hr>
+
+        <!-- Courses -->
+        <section id="courses">
+
+            <h2>My Courses</h2>
+
+            <ol>
+
+                <li>
+                    <strong>Web Development</strong>
+
+                    <p>
+                        HTML, CSS, JavaScript and React
+                    </p>
+
+                    <progress value="80"
+                              max="100">
+                    </progress>
+
+                    80%
+                </li>
+
+                <br>
+
+                <li>
+                    <strong>Python Programming</strong>
+
+                    <p>
+                        Python basics and advanced programming
+                    </p>
+
+                    <progress value="70"
+                              max="100">
+                    </progress>
+
+                    70%
+                </li>
+
+                <br>
+
+                <li>
+                    <strong>Database Management</strong>
+
+                    <p>
+                        PostgreSQL, SQL and database concepts
+                    </p>
+
+                    <progress value="65"
+                              max="100">
+                    </progress>
+
+                    65%
+                </li>
+
+            </ol>
+
+        </section>
+
+        <hr>
+
+        <!-- Registration Form -->
+        <section id="contact">
+
+            <h2>Student Registration</h2>
+
+            <form>
+
+                <fieldset>
+
+                    <legend>
+                        Personal Details
+                    </legend>
+
+                    <label for="name">
+                        Full Name:
+                    </label>
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           required
+                           placeholder="Enter your name">
+
+                    <br><br>
+
+                    <label for="email">
+                        Email:
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required
+                           placeholder="Enter email">
+
+                    <br><br>
+
+                    <label for="password">
+                        Password:
+                    </label>
+
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           minlength="8"
+                           required>
+
+                    <br><br>
+
+                    <label for="age">
+                        Age:
+                    </label>
+
+                    <input type="number"
+                           id="age"
+                           name="age"
+                           min="18"
+                           max="60">
+
+                    <br><br>
+
+                    <label for="course">
+                        Select Course:
+                    </label>
+
+                    <select id="course"
+                            name="course">
+
+                        <option value="">
+                            Choose Course
+                        </option>
+
+                        <option value="bca">
+                            BCA
+                        </option>
+
+                        <option value="btech">
+                            B.Tech
+                        </option>
+
+                        <option value="mca">
+                            MCA
+                        </option>
+
+                    </select>
+
+                    <br><br>
+
+                    <label>
+                        Gender:
+                    </label>
+
+                    <input type="radio"
+                           name="gender"
+                           value="male">
+                    Male
+
+                    <input type="radio"
+                           name="gender"
+                           value="female">
+                    Female
+
+                    <br><br>
+
+                    <label for="joining">
+                        Joining Date:
+                    </label>
+
+                    <input type="date"
+                           id="joining"
+                           name="joining">
+
+                    <br><br>
+
+                    <label for="message">
+                        Address:
+                    </label>
+
+                    <br>
+
+                    <textarea id="message"
+                              rows="4"
+                              cols="40"
+                              placeholder="Enter your address">
+                    </textarea>
+
+                    <br><br>
+
+                    <button type="submit">
+                        Register
+                    </button>
+
+                    <button type="reset">
+                        Clear
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+        <hr>
+
+        <!-- FAQ -->
+        <section>
+
+            <h2>FAQ</h2>
+
+            <details>
+                <summary>
+                    What is BCA?
+                </summary>
+
+                <p>
+                    BCA stands for Bachelor of Computer Applications.
+                </p>
+            </details>
+
+            <br>
+
+            <details>
+                <summary>
+                    What is HTML5?
+                </summary>
+
+                <p>
+                    HTML5 is the modern standard used
+                    to structure web pages.
+                </p>
+            </details>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Student Dashboard
+        </p>
+
+        <p>
+            Made with ❤️ using HTML5
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
