@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Advanced HTML5 Student Portfolio Website">
+    <meta name="keywords"
+        content="HTML5, Web Development, Portfolio, BCA">
+    <meta name="author" content="Vivek Shrivastav">
+
+    <title>Advanced HTML5 Portfolio</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Vivek Shrivastav</h1>
+        <p>BCA Student | Web Developer</p>
+
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home">
+            <h2>Welcome to My Portfolio</h2>
+
+            <p>
+                Hello! I am learning modern web development
+                using HTML, CSS, JavaScript and React.
+            </p>
+
+            <button onclick="alert('Welcome!')">
+                Explore My Portfolio
+            </button>
+        </section>
+
+        <hr>
+
+        <!-- About -->
+        <section id="about">
+            <h2>About Me</h2>
+
+            <article>
+                <h3>Who Am I?</h3>
+                <p>
+                    I am a BCA student interested in programming,
+                    web development and database technologies.
+                </p>
+            </article>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>React</li>
+            </ul>
+
+            <h3>Skill Progress</h3>
+
+            <label>HTML</label>
+            <progress value="90" max="100"></progress>
+
+            <br><br>
+
+            <label>CSS</label>
+            <progress value="75" max="100"></progress>
+
+            <br><br>
+
+            <label>JavaScript</label>
+            <progress value="60" max="100"></progress>
+        </section>
+
+        <hr>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <article>
+                <h3>Student Management System</h3>
+                <p>
+                    A database-based project for managing
+                    student information.
+                </p>
+            </article>
+
+            <article>
+                <h3>Portfolio Website</h3>
+                <p>
+                    A responsive personal portfolio website
+                    created using HTML and CSS.
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Advanced Form -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form>
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="name">Full Name:</label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="Enter your name"
+                           required>
+
+                    <br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="example@gmail.com"
+                           required>
+
+                    <br><br>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel"
+                           id="phone"
+                           name="phone"
+                           pattern="[0-9]{10}"
+                           placeholder="10 digit number">
+
+                    <br><br>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+
+                    <br><br>
+
+                    <label for="course">Course:</label>
+
+                    <select id="course" name="course">
+                        <option value="">Select Course</option>
+                        <option value="bca">BCA</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="mca">MCA</option>
+                    </select>
+
+                    <br><br>
+
+                    <label>Gender:</label>
+
+                    <input type="radio"
+                           name="gender"
+                           value="male">
+                    Male
+
+                    <input type="radio"
+                           name="gender"
+                           value="female">
+                    Female
+
+                    <br><br>
+
+                    <label>Skills:</label>
+
+                    <input type="checkbox" name="html">
+                    HTML
+
+                    <input type="checkbox" name="css">
+                    CSS
+
+                    <input type="checkbox" name="js">
+                    JavaScript
+
+                    <br><br>
+
+                    <label for="message">Message:</label>
+
+                    <br>
+
+                    <textarea id="message"
+                              name="message"
+                              rows="5"
+                              cols="40"
+                              placeholder="Write your message...">
+                    </textarea>
+
+                    <br><br>
+
+                    <button type="submit">
+                        Submit
+                    </button>
+
+                    <button type="reset">
+                        Reset
+                    </button>
+
+                </fieldset>
+
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Details / Summary -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+                <summary>What is HTML?</summary>
+                <p>
+                    HTML stands for HyperText Markup Language.
+                    It is used to structure web pages.
+                </p>
+            </details>
+
+            <br>
+
+            <details>
+                <summary>What is HTML5?</summary>
+                <p>
+                    HTML5 is the modern version of HTML
+                    with semantic, multimedia and form features.
+                </p>
+            </details>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Vivek Shrivastav. All Rights Reserved.</p>
+
+        <address>
+            Email:
+            <a href="mailto:vivek@example.com">
+                vivek@example.com
+            </a>
+        </address>
+    </footer>
+
+</body>
+</html>
