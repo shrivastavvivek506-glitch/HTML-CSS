@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #e9eef5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .id-card {
+            width: 350px;
+            min-height: 500px;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 2px solid #1d4ed8;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .header h1 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 14px;
+        }
+
+        .photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            display: block;
+            margin: -60px auto 15px;
+            position: relative;
+            background: #ddd;
+        }
+
+        .details {
+            padding: 10px 25px 25px;
+        }
+
+        .detail {
+            margin: 14px 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        .label {
+            color: #555;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .value {
+            color: #111827;
+            font-size: 16px;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #f1f5f9;
+            text-align: center;
+            padding: 12px;
+            color: #64748b;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="id-card">
+
+        <div class="header">
+            <h1>STUDENT ID CARD</h1>
+            <p>ABC Institute of Technology</p>
+        </div>
+
+        <!-- Replace student.jpg with your photo -->
+        <img src="student.jpg" alt="ID Photo" class="photo">
+
+        <div class="details">
+
+            <div class="detail">
+                <div class="label">Full Name</div>
+                <div class="value">Rahul Kumar</div>
+            </div>
+
+            <div class="detail">
+                <div class="label">Course</div>
+                <div class="value">BCA - Computer Applications</div>
+            </div>
+
+            <div class="detail">
+                <div class="label">Date of Birth</div>
+                <div class="value">15 January 2005</div>
+            </div>
+
+            <div class="detail">
+                <div class="label">Address</div>
+                <div class="value">
+                    123, Main Street,<br>
+                    Meerut, Uttar Pradesh - 250001
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Valid Student Identification Card
+        </div>
+
+    </div>
+
+</body>
+</html>
